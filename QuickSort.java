@@ -1,4 +1,5 @@
 package QuickSort;
+import java.util.Random;
 
 public class QuickSort {
     public static void quickSort(int[] array, int lo, int hi) {
@@ -29,7 +30,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int size = 1000000;
         int[] array = new int[size];
-        Random random = new random();
+        Random random = new Random();
 
         for (int i = 0; i < size; i++) {
             array[i] = random.nextInt();
