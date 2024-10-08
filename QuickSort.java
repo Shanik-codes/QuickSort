@@ -9,5 +9,7 @@ public class QuickSort {
         quickSort(array, lo, p - 1);
         quickSort(array, p + 1, hi);
     }
-    
+    private static int partition(int[] array, int lo, int hi) {
+        
+    }
 }
