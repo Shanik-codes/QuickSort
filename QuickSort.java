@@ -26,4 +26,21 @@ public class QuickSort {
         array[i] = array[j];
         array[j] = temp;
     }
+    public static void main(String[] args) {
+        int size = 1000000;
+        int[] array = new int[size];
+        Random random = new Random();
+
+        for (int i = 0; i < size; i++) {
+            array[i] = random.nextInt();
+        }
+        int[] arrayCopy = array.clone();
+
+        long start = System.currentTimeMillis();
+        quickSort(array, 0, array.length - 1);
+        long end = System.currentTimeMillis();
+        System.out.println("Quicksort runtime: " + (end - start) + " ms");
+
+        
+    }
 }
