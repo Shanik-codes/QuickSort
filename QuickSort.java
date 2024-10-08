@@ -29,7 +29,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int size = 1000000;
         int[] array = new int[size];
-        Random random = new Random();
+        Random random = new random();
 
         for (int i = 0; i < size; i++) {
             array[i] = random.nextInt();
@@ -41,6 +41,9 @@ public class QuickSort {
         long end = System.currentTimeMillis();
         System.out.println("Quicksort runtime: " + (end - start) + " ms");
 
-        
+        start = System.currentTimeMillis();
+        java.util.Arrays.sort(arrayCopy);
+        end = System.currentTimeMillis();
+        System.out.println("Built-in sort runtime: " + (end - start) + " ms");
     }
 }
